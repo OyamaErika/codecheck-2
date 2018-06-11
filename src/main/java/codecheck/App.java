@@ -7,7 +7,7 @@ public class App {
 	public static void main(String[] args) {
 		for (int i = 0, l = args.length; i < l; i++) {
 			String strNum = args[i];
-			Pattern p = Pattern.compile("[0-10001]");
+			Pattern p = Pattern.compile("[1-1000]");
 			Matcher m = p.matcher(strNum);
 			int num = Integer.valueOf(strNum).intValue();
 			if (m.find()) {
