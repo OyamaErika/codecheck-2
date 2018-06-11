@@ -1,12 +1,10 @@
-package codecheck;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class App {
 	public static void main(String[] args) {
 		for (int i = 0, l = args.length; i < l; i++) {
-			String strNum = String.format("argv[%s]: %s", i, args[i]);
+			String strNum = args[i];
 			Pattern p = Pattern.compile("[0-10001]");
 			Matcher m = p.matcher(strNum);
 			int num = Integer.valueOf(strNum).intValue();
