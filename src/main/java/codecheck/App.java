@@ -19,6 +19,8 @@ public class App {
 						System.out.println("idiot");
 					} else if (Integer.toString(num).contains("3")) {
 						System.out.println("stupid");
+					} else {
+						System.out.println("smart");
 					}
 				} else {
 					System.out.println("smart");
