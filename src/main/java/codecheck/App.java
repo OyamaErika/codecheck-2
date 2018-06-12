@@ -9,14 +9,17 @@ public class App {
 			String strNum = args[i];
 			Pattern p = Pattern.compile("^[1-9][0-9]*$");
 			Matcher m = p.matcher(strNum);
-			int num = Integer.valueOf(strNum).intValue();
-			if (m.find() && num < 1001) {
-				if (num % 3 == 0 && Integer.toString(num).contains("3")) {
-					System.out.println("dumb");
-				} else if (num % 3 == 0) {
-					System.out.println("idiot");
-				}else if (Integer.toString(num).contains("3")) {
-					System.out.println("stupid");
+
+			if (m.find()) {
+				int num = Integer.valueOf(strNum).intValue();
+				if (num < 1001) {
+					if (num % 3 == 0 && Integer.toString(num).contains("3")) {
+						System.out.println("dumb");
+					} else if (num % 3 == 0) {
+						System.out.println("idiot");
+					} else if (Integer.toString(num).contains("3")) {
+						System.out.println("stupid");
+					}
 				} else {
 					System.out.println("smart");
 				}
