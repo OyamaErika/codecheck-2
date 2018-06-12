@@ -11,7 +11,7 @@ public class App {
 			Matcher m = p.matcher(strNum);
 
 			if (m.find()) {
-				int num = Integer.valueOf(strNum).intValue();
+				int num = Integer.parseInt(strNum);
 				if (num < 1001) {
 					if (num % 3 == 0 && Integer.toString(num).contains("3")) {
 						System.out.println("dumb");
